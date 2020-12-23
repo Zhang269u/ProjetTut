@@ -1,13 +1,13 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
+import { AppController } from '../Controller/app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
-import { Thematic } from './Entities/thematic/thematic.entity';
-import { Offer } from './Entities/offer/offer.entity';
-import { Media } from './Entities/media/media.entity';
-import { Slide } from './Entities/slide/slide.entity';
-import { User } from './Entities/user/user.entity';
+import { Thematic } from '../Entities/thematic.entity';
+import { Offer } from '../Entities/offer.entity';
+import { Media } from '../Entities/media.entity';
+import { Slide } from '../Entities/slide.entity';
+import { User } from '../Entities/user.entity';
 
 @Module({
   imports: [
