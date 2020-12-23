@@ -14,6 +14,10 @@ export class UsersService {
         return this.usersRepository.find();
     }
 
+    async createUser(user: CreateUserDto){
+        const newUser = await this.usersRepository.create(user);
+    }
+
     findOne(id: string): Promise<User> {
         return this.usersRepository.findOne(id);
     }
