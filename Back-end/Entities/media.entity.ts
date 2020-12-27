@@ -5,16 +5,16 @@ export class Media {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ unique: true })
   slide_id: number;
 
-  @Column()
+  @Column({ unique: true })
   offer_logo_id: number;
 
-  @Column()
+  @Column({ unique: true })
   offer_background_id: number;
 
-  @Column()
+  @Column({ unique: true })
   thematic_thumbnail_id: number;
 
   @Column()
