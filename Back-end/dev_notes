@@ -9,6 +9,12 @@ Pour la creation des utilisateurs on aurait pu créer un service à part "create
 précisant les variables utilisées pour en créer un, mais on a déjà user entity donc pas obligé.
 
 
+Sessions:
+On utilise JSON web tokens.
+
+Jwtauth.guard.ts:
+Les utilisateurs vont devoir s'authentifier lorsqu'ils veulent envoyer des requetes à notre API.
+
 
 
 
