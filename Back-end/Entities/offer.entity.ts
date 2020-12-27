@@ -5,13 +5,13 @@ export class Offer {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ unique: true })
   user_id: number;
 
   @Column()
   name: string;
 
-  @Column()
+  @Column({ unique: true })
   slug: string;
 
   @Column()

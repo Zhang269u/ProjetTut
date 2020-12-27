@@ -1,0 +1,4 @@
+Authentification:
+
+->passport pour authentification
+->hashing pour sauvegarde sécurisée de mdp

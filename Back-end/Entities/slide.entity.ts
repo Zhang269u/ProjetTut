@@ -8,13 +8,13 @@ export class Slide {
   @Column()
   thematic_id: number;
 
-  @Column()
+  @Column({ unique: true })
   media_id: number;
 
   @Column()
   title: string;
 
-  @Column()
+  @Column({ unique: true })
   slug: string;
 
   @Column()

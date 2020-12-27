@@ -17,7 +17,7 @@ export class Thematic {
   @Column({ default: false })
   is_shared: boolean;
 
-  @Column()
+  @Column({ unique: true })
   slug: string;
 
   @Column()

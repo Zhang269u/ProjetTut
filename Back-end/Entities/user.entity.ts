@@ -17,7 +17,7 @@ export class User {
   @Column()
   companyName: string;
 
-  @Column()
+  @Column({ unique: true })
   confirmationToken: string;
 
   @Column()
@@ -32,7 +32,7 @@ export class User {
   @Column()
   updated_at: Date;
 
-  @Column()
+  @Column({ unique: true })
   offer_id: number;
 
   @Column()
@@ -59,9 +59,9 @@ export class User {
   @Column()
   username: string;
 
-  @Column()
+  @Column({ unique: true })
   username_canonical: string;
 
-  @Column()
+  @Column({ unique: true })
   email_canonical: string;
 }
