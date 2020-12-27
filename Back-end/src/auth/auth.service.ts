@@ -1,7 +1,24 @@
-import {HttpException, Injectable, HttpStatus} from '@nestjs/common';
+import {
+    HttpException,
+    Injectable,
+    HttpStatus,
+    HttpCode,
+    UseGuards,
+    Post,
+    Req,
+    Res,
+    Controller,
+    Get
+} from '@nestjs/common';
 import { UsersService } from '../../Services/user.service';
 import { JwtService } from '@nestjs/jwt';
 import {User} from "../../Entities/user.entity";
+import {LocalAuthGuard} from "../../Guards/auth.guard";
+import RequestWithUser from "../../Interfaces/requestWithUser.interface";
+import { Response } from 'express';
+import {ConfigService} from "@nestjs/config";
+import JwtAuthenticationGuard from "../../Guards/jwtAuth.guard";
+@Controller(`auth`)
 
 @Injectable()
 export class AuthService{
@@ -10,6 +27,7 @@ export class AuthService{
         private readonly usersService: UsersService,
         private readonly jwtService: JwtService,
         private readonly bcrypt = require('bcrypt'),
+        private readonly configService: ConfigService
     ) {}
 
     public async register(registrationData: User) {
@@ -59,10 +77,39 @@ export class AuthService{
         return null;
     }
 
-    async login(user : any){
-        const payload = { username : user.username, sub: user.id};
-        return {
-            access_token: this.jwtService.sign(payload),
-        };
+    @HttpCode(200)
+    @UseGuards(LocalAuthGuard)
+    @Post('login')
+    async login(@Req() request: RequestWithUser, @Res() res: Response) {
+        const {user} = request;
+        const cookie = this.getCookieWithJwtToken(user.id);
+        res.setHeader('Set-Cookie', cookie);
+        user.password = undefined;
+        return res.send(user);
+    }
+
+    public getCookieForLogOut() {
+        return `Authentication=; HttpOnly; Path=/; Max-Age=0`;
+    }
+
+    @UseGuards(JwtAuthenticationGuard)
+    @Post('logout')
+    async logout(@Req() request: RequestWithUser, @Res() response: Response) {
+        response.setHeader('Set-Cookie', this.getCookieForLogOut());
+        return response.sendStatus(200);
+    }
+
+    public getCookieWithJwtToken(userId: number) {
+            const payload: TokenPayload = { userId };
+            const token = this.jwtService.sign(payload);
+            return `Authentication=${token}; HttpOnly; Path=/; Max-Age=${this.configService.get('JWT_EXPIRATION_TIME')}`;
+        }
+
+    @UseGuards(JwtAuthenticationGuard)
+    @Get()
+    authenticate(@Req() request: RequestWithUser) {
+        const user = request.user;
+        user.password = undefined;
+        return user;
     }
 }
