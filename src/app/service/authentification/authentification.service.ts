@@ -31,4 +31,10 @@ private checkEmail(email:string): boolean{
 private checkPsw(psw:string): boolean{
 return psw === this.mockedUser.getPsw();
 }
+
+logout(){
+this.isAuthentificated = false;
+this.router.navigate(['login']);
+
+}
 }

@@ -1,12 +1,36 @@
+.container{
+    min-width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,.07)),url("wall.jpg");
+    background-position: center;
+    background-size: cover;
+}
 .login-wrapper{
     margin: 20rem auto;
     width: 20rem;
 
 }
+form {
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.505);
+    width: auto;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    box-shadow: 15px 30px 40px rgba(0, 0, 0, 0.288);
+}
+
 input{
     margin-bottom: 2rem;
 }
 
-.all{
-background-image: url('/img/wall.jpg');
-}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthentificationService } from './service/authentification/authentification.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'TrueProjAngular';
+  myimage:string = "assets/img/wall.jpg";
+  constructor(public authentificationService: AuthentificationService){
+
+  }
+  signin(){
+    var config ={
+        
+    }
+  };
+
+  
+  logout(){
+    this.authentificationService.logout();
+  }
+
 }
