@@ -300,6 +300,12 @@
   padding: 470px;
   background-color:lightslategrey;
 }
+.deconnection{
+  margin-left: 50px;
+
+
+}
+/* Block du haut */
 .box {
  
  
@@ -320,8 +326,9 @@
 .block {
   display: flex;
   margin-top: -400px;
-
-}  
+  padding :5px;
+} 
+/* Block pour tout afficher */
 .blockprincipal {
 
 margin-left: -200px;
@@ -332,6 +339,15 @@ margin-left: -200px;
  box-sizing: border-box;
  background-color: ghostwhite;
 }
+.blockutil{
+  text-align: center;
+  
+    width: 1400px;
+    height: 700px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: lightgrey;
+}
 </style>
 
 <!-- Toolbar -->
@@ -341,6 +357,11 @@ margin-left: -200px;
     
   />
   <span>Espace Administrateur</span>
+  <div class="Deconnection">
+
+  
+  <button (click) ="toggleDisplay()">Deconnection</button>
+</div>
 </div>
 
 <body>
@@ -350,33 +371,36 @@ margin-left: -200px;
 
     <div class = "box">
 
-      <p>Utilisateurs</p> 
-
+      <p></p> 
+      <button (click) ="toggleDisplay()">Utilisateur </button>
   </div>
   <div class = "box">
 
-    <p>Offres</p> 
+    <p></p> 
+    <button (click) ="toggleDisplay()">Offres</button>
+  </div>
+  <div class = "box">
+
+    <button (click) ="toggleDisplay()">Thématiques</button> 
   
   </div>
   <div class = "box">
-
-    <p>Thématiques</p> 
-  
-  </div>
-  <div class = "box">
-    <p>Statistiques</p> 
+    <button (click) ="toggleDisplay()">Statistiques</button> 
 
   </div>
   
 </div> 
 <div class="blockprincipal">
-  <div class="block">
-  Test2
+  <div *ngIf = "!isDisplay" style="background-color:white">
+  <div class="blockutil">
+  Interface Administrateur : "Utilisateur"
+  </div>
+</div>
 </div>
 
 
 </div>
-</div>
+
 </body>
 
 
