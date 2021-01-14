@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Offer } from '../Entities/offer.entity';
+import {User} from "../Entities/user.entity";
 
 @Injectable()
 export class OfferService {
@@ -20,5 +21,11 @@ export class OfferService {
 
     async remove(id: string): Promise<void> {
         await this.offerRepository.delete(id);
+    }
+
+    async createOffer(offer : Offer){
+        const newOffer = await this.offerRepository.create(offer);
+        await this.offerRepository.save(newOffer);
+        return newOffer;
     }
 }
