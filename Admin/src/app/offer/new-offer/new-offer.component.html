@@ -1,1 +1,37 @@
-<p>new-offer works!</p>
+<form class="was-validated">
+    <div class="mb-3">
+        <label for="validationTextarea" class="form-label">Titre</label>
+        <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Titre" required></textarea>
+        <div class="invalid-feedback">
+          Un titre est obligatoirement demandé
+        </div>
+      </div>
+    <div class="mb-3">
+      <label for="validationTextarea" class="form-label">Texte de description</label>
+      <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Texte de description" required></textarea>
+      <div class="invalid-feedback">
+        Un texte est obligatoirement demandé
+      </div>
+    </div>
+  
+    <div class="mb-3">
+      <select class="form-select" required aria-label="select example">
+        <option value="">Offres</option>
+        <option value="1">Cultura</option>
+        <option value="2">Leclerc</option>
+        <option value="3">Mercedes</option>
+        <option value="4">Total</option>
+        <option value="5">...</option>
+      </select>
+      <div class="invalid-feedback">Offre obligatoire</div>
+    </div>
+  
+    <div class="mb-3">
+      <input type="file" class="form-control" aria-label="file example" required>
+      <div class="invalid-feedback">Inserez un document au minimum</div>
+    </div>
+  
+    <div class="mb-3">
+      <button class="btn btn-primary" type="submit" disabled>Créer</button>
+    </div>
+  </form>
