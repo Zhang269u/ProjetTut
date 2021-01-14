@@ -11,30 +11,28 @@ export class AuthentificationService {
   isAuthentificated = false;
 
   constructor(private router: Router) { }
-  
-  authentification(signInData : SignInData): boolean{
-if(this.checkCredentials(signInData)){
-  this.isAuthentificated = true;
-  this.router.navigate(['home']);
-  return true;
-}
-this.isAuthentificated = false;
-return false;
 
- }
-private checkCredentials(signInData: SignInData): boolean{
-return this.checkEmail(signInData.getEmail()) && this.checkPsw(signInData.getPsw());
-}
-private checkEmail(email:string): boolean{
-  return email === this.mockedUser.getEmail();
-}
-private checkPsw(psw:string): boolean{
-return psw === this.mockedUser.getPsw();
-}
+  authentification(signInData: SignInData): boolean{
+      if(this.checkCredentials(signInData)){
+        this.isAuthentificated = true;
+        this.router.navigate(['user']);
+        return true;
+      }
+      this.isAuthentificated = false;
+      return false;
+  }
+  private checkCredentials(signInData: SignInData): boolean{
+    return this.checkEmail(signInData.getEmail()) && this.checkPsw(signInData.getPsw());
+  }
+  private checkEmail(email:string): boolean{
+    return email === this.mockedUser.getEmail();
+  }
+  private checkPsw(psw:string): boolean{
+    return psw === this.mockedUser.getPsw();
+  }
 
-logout(){
-this.isAuthentificated = false;
-this.router.navigate(['login']);
-
-}
+  logout(){
+    this.isAuthentificated = false;
+    this.router.navigate(['login']);
+  }
 }
