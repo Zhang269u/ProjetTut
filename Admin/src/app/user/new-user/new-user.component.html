@@ -1,1 +1,37 @@
-Création d'un nouvel utilisateur
+<main role="main" class="container">
+  <div class="login-wrapper">
+    <div class="card">
+      <div class="card-body">
+        <form class="form-signin"  (ngSubmit)="onSubmit(signInForm)" #signInForm="ngForm">
+          <h1 class="h3 mb-3 fw-normal">Création d'un nouvel utilisateur</h1>
+
+          <label for="inputEmail" class="visually-hidden">Email</label>
+          <input type="email" id="inputEmail" name="email" class="form-control"
+                 placeholder="Email" required autofocus ngModel>
+
+          <label for="inputPassword" class="visually-hidden">Mot de passe</label>
+          <input type="password" id="inputPassword" name ="psw" class="form-control"
+                 placeholder="Mot de passe" required ngModel>
+
+          <label for="inputNom" class="visually-hidden">Nom</label>
+          <input type="nom" id="inputNom" name="nom" class="form-control"
+                 placeholder="Nom" required autofocus ngModel>
+
+          <label for="inputPrénom" class="visually-hidden">Prénom</label>
+          <input type="prénom" id="inputPrénom" name="prénom" class="form-control"
+                 placeholder="Prénom" required autofocus ngModel>
+
+          <label for="inputAdresse" class="visually-hidden">Adresse</label>
+          <input type="adresse" id="inputAdresse" name="adresse" class="form-control"
+                 placeholder="Adresse" required autofocus ngModel>
+
+          <label for="inputTéléphone" class="visually-hidden">Téléphone</label>
+          <input type="Téléphone" id="inputTéléphone" name="Téléphone" class="form-control"
+                 placeholder="Téléphone" required autofocus ngModel>
+
+          <button class="w-100 btn btn-lg btn-primary" type="submit">Créer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>

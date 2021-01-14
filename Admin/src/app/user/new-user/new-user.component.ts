@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-new-user',
@@ -13,4 +14,8 @@ export class NewUserComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // tslint:disable-next-line:typedef
+  onSubmit(signInForm: NgForm) {
+    console.log(signInForm.value);
+  }
 }

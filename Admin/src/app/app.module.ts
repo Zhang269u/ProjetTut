@@ -20,7 +20,10 @@ const appRoutes: Routes = [
   {path : 'User/new' , component : NewUserComponent},
   {path: 'login', component: LoginComponent},
   {path : 'Offer', component : OfferComponent},
-  {path : 'Offer/new', component : NewOfferComponent}
+  {path : 'Offer/new', component : NewOfferComponent},
+  {path : 'Thematic/new', component : NewThematicComponent},
+  {path : 'Thematic', component : ThematicComponent},
+
 ];
 
 

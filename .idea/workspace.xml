@@ -2,47 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="599494b6-3568-423c-925c-385d4e662a0f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ProjetTut.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/.vs/Admin/v16/.suo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/.vs/ProjectSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/.vs/VSWorkspaceState.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/.vs/slnx.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/model/signInData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/offer/new-offer/new-offer.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/offer/new-offer/new-offer.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/offer/new-offer/new-offer.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/offer/new-offer/new-offer.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/offer/offer.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/offer/offer.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/offer/offer.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/offer/offer.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/service/authentification/auth-guard.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/thematic/new-thematic/new-thematic.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/thematic/new-thematic/new-thematic.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/thematic/new-thematic/new-thematic.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/thematic/new-thematic/new-thematic.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/thematic/thematic.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/thematic/thematic.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/thematic/thematic.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/thematic/thematic.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/user/new-user/new-user.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/user/new-user/new-user.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/user/new-user/new-user.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/user/new-user/new-user.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/user/user.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/user/user.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/user/user.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/app/user/user.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/app/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/app/service/authentification/authentification.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/app/service/authentification/authentification.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/app/user/new-user/new-user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/app/user/new-user/new-user.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/app/user/new-user/new-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/app/user/new-user/new-user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/app/user/user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/app/user/user.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610549596077</updated>
       <workItem from="1610549600993" duration="2897000" />
-      <workItem from="1610631840462" duration="5330000" />
+      <workItem from="1610631840462" duration="6974000" />
     </task>
     <servers />
   </component>
